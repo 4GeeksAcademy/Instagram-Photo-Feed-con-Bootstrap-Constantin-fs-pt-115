@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/YOUR_KIT_CODE.js" crossorigin="anonymous"></script>
+    <title>Instagram Feed</title>
+    <!-- Para este trabajo se han usado, Bootstrap, fontawesome y la hoja de styles.css debido a las imagenes y algunos arreglos necesarios -->
+
+
+</head>
+
+<body>
+
+
+    <nav class="navbar bg-body-tertiary"> <!-- barra de navegacion con logo+create+tuerca-->
+        <div class="container-fluid d-flex justify-content-between align-items-center px-3">
+            <div class="Instagramlogo"> <!-- logo -->
+                <i class="fa-brands fa-instagram fa-2xl"></i> Instagram
+            </div>
+
+            <div class="botones d-flex justify-content-between gap-3">
+                <!-- se aplica gap-3 para el espacio entre los dos contenedores que estan en d-flex -->
+                <button type="button" class="btn btn-success" data-bs-toggle="modal"
+                    data-bs-target="#menuCrearPost">Create a new post</button> <!-- activar el modal y target -->
+                <div class="btn-group" role="group"> <!-- copiado de la web, el dropdown azul -->
+                    <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        <i class="fa-solid fa-gear" style="color: #ffffff;"></i>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Profile</a></li>
+                        <li><a class="dropdown-item" href="#">Accesibility</a></li>
+                        <li><a class="dropdown-item" href="#">Privacy and Data</a></li>
+                        <hr> <!-- hace una linea horizontal como en el ejemplo -->
+                        <li><a class="dropdown-item" href="#">Log out</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </nav>
+
+
+
+
+    <ul class="nav nav-tabs justify-content-center mb-0 mt-3" id="myTab" role="tablist">
+        <!-- copiado de la web,margin bottom y margin top para ajustar sus posiciones, boton negro con cuadritos y azul entero  -->
+        <li class="nav-item" role="presentation"> <!-- tab recortado de la pagina -->
+            <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane"
+                type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true"><i
+                    class="fa-solid fa-table-cells" style="color: #000000;"></i></button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane"
+                type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false"><i
+                    class="fa-solid fa-stop" style="color: #000dff;"></i></button>
+        </li>
+    </ul>
+    <div class="tab-content" id="myTabContent">
+        <!-- dentro de tab content meto la galeria 1 y 2 en sus tabs respectivos -->
+        <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab"
+            tabindex="0">
+            <div id="galeria1" class="galeria">
+                <div class="imagenes row g-1"> <!-- se mete espaciado con g-1 para separar las imagenes-->
+                    <div class="col-12 col-md-4 mb-0">
+                        <!--col12->pantallas pequeñas 1 imagen,medium 3 imagenes, mb margen inferior  -->
+                        <img src="https://cdn.pixabay.com/photo/2025/04/14/03/17/squirrel-9532595_1280.jpg"
+                            class="img-fluid img-fixed-height" alt="">
+                    </div>
+                    <div class="col-12 col-md-4 mb-0">
+                        <img src="https://cdn.pixabay.com/photo/2025/04/22/09/32/daisy-9549631_1280.jpg"
+                            class="img-fluid img-fixed-height" alt="">
+                    </div>
+                    <div class="col-12 col-md-4 mb-0">
+                        <img src="https://cdn.pixabay.com/photo/2023/08/20/20/36/irish-setter-8203155_1280.jpg"
+                            class="img-fluid img-fixed-height" alt="">
+                    </div>
+                    <div class="col-12 col-md-4 mb-0">
+                        <img src="https://cdn.pixabay.com/photo/2023/09/04/23/58/woman-8233937_1280.jpg"
+                            class="img-fluid img-fixed-height" alt="">
+                    </div>
+                    <div class="col-12 col-md-4 mb-0">
+                        <img src="https://cdn.pixabay.com/photo/2020/01/20/02/25/nature-4779321_1280.jpg"
+                            class="img-fluid img-fixed-height" alt="">
+                    </div>
+                    <div class="col-12 col-md-4 mb-0">
+                        <img src="https://cdn.pixabay.com/animation/2023/03/05/12/05/12-05-54-62_512.gif"
+                            class="img-fluid img-fixed-height" alt="">
+                    </div>
+                    <div class="col-12 col-md-4 mb-0">
+                        <img src="https://cdn.pixabay.com/animation/2023/02/12/10/27/10-27-32-295_512.gif"
+                            class="img-fluid img-fixed-height" alt="">
+                    </div>
+                    <div class="col-12 col-md-4 mb-0">
+                        <img src="https://cdn.pixabay.com/photo/2025/05/25/12/44/bird-9621424_1280.jpg"
+                            class="img-fluid img-fixed-height" alt="">
+                    </div>
+                    <div class="col-12 col-md-4 mb-0">
+                        <img src="https://cdn.pixabay.com/photo/2025/04/28/19/59/female-model-9565629_1280.jpg"
+                            class="img-fluid img-fixed-height" alt="">
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0"
+            class="CajaFoto container-fluid">
+            <div class="Fila row justify-content-center g-0"> <!--  gap 0 espacio=0-->
+                <div class="Pantalla col-11 col-sm-9 col-md-6 col-lg-6 col-xl-6">
+                    <div class="Borde border rounded p-0 "> <!-- padding 0, elimina el espaciado interno -->
+                        <div class="Titulo d-flex justify-content-between align-items-start mb-2 px-3 pt-3">
+                            <div class="fw-bold">Ardilla</div>
+                            <small class="text-muted">28/02</small>
+                        </div>
+                        <!-- img-fluid que se adapte al contenedor -->
+                        <img src="https://cdn.pixabay.com/photo/2025/04/14/03/17/squirrel-9532595_1280.jpg"
+                            alt="Ardilla" class="img-fluid img-fixed-height">
+                        <div class="TextoDeLaFoto foto-text justify-content-start align-items-start mt-3 px-3 pb-3">
+                            <div class="Likes">
+                                <b>54546 Likes</b>
+                                <p>Ardillita salvaje :3</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="Fila row justify-content-center g-0">
+                <div class="Pantalla col-11 col-sm-9 col-md-6 col-lg-6 col-xl-6">
+                    <div class="Borde border rounded p-0 ">
+                        <div class="Titulo d-flex justify-content-between align-items-start mb-2 px-3 pt-3">
+                            <div class="fw-bold">Dientes de león</div>
+                            <small class="text-muted">08/02</small>
+                        </div>
+                        <img src="https://cdn.pixabay.com/photo/2025/04/22/09/32/daisy-9549631_1280.jpg" alt="Daisy"
+                            class="img-fluid img-fixed-height">
+                        <div class="TextoDeLaFoto foto-text justify-content-start align-items-start mt-3 px-3 pb-3">
+                            <div class="Likes">
+                                <b>999 Likes</b>
+                                <p>Flores primaverales que salieron después de estas lluvias tan intensas</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="Fila row justify-content-center g-0">
+                <div class="Pantalla col-11 col-sm-9 col-md-6 col-lg-6 col-xl-6">
+                    <div class="Borde border rounded p-0 ">
+                        <div class="Titulo d-flex justify-content-between align-items-start mb-2 px-3 pt-3">
+                            <div class="fw-bold">Un perrito irlandés</div>
+                            <small class="text-muted">28/01</small>
+                        </div>
+                        <img src="https://cdn.pixabay.com/photo/2023/08/20/20/36/irish-setter-8203155_1280.jpg"
+                            alt="Perrito" class="img-fluid img-fixed-height">
+                        <div class="TextoDeLaFoto foto-text justify-content-start align-items-start mt-3 px-3 pb-3">
+                            <div class="Likes">
+                                <b>123400 Likes</b>
+                                <p>Un perrito que nos encontramos a las afueras de la casa cuando estuvimos en Irlanda
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="Fila row justify-content-center g-0">
+                <div class="Pantalla col-11 col-sm-9 col-md-6 col-lg-6 col-xl-6">
+                    <div class="Borde border rounded p-0 ">
+                        <div class="Titulo d-flex justify-content-between align-items-start mb-2 px-3 pt-3">
+                            <div class="fw-bold">Moza</div>
+                            <small class="text-muted">20/01</small>
+                        </div>
+                        <img src="https://cdn.pixabay.com/photo/2023/09/04/23/58/woman-8233937_1280.jpg" alt="Moza"
+                            class="img-fluid img-fixed-height">
+                        <div class="TextoDeLaFoto foto-text justify-content-start align-items-start mt-3 px-3 pb-3">
+                            <div class="Likes">
+                                <b>201231238 Likes</b>
+                                <p>Una moza muy hermoza</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="Fila row justify-content-center g-0">
+                <div class="Pantalla col-11 col-sm-9 col-md-6 col-lg-6 col-xl-6">
+                    <div class="Borde border rounded p-0 ">
+                        <div class="Titulo d-flex justify-content-between align-items-start mb-2 px-3 pt-3">
+                            <div class="fw-bold">Naturaleza</div>
+                            <small class="text-muted">28/02</small>
+                        </div>
+                        <img src="https://cdn.pixabay.com/photo/2020/01/20/02/25/nature-4779321_1280.jpg"
+                            alt="Naturaleza" class="img-fluid img-fixed-height">
+                        <div class="TextoDeLaFoto foto-text justify-content-start align-items-start mt-3 px-3 pb-3">
+                            <div class="Likes">
+                                <b>8765 Likes</b>
+                                <p>Un bonito y precioso paisaje</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="Fila row justify-content-center g-0">
+                <div class="Pantalla col-11 col-sm-9 col-md-6 col-lg-6 col-xl-6">
+                    <div class="Borde border rounded p-0 ">
+                        <div class="Titulo d-flex justify-content-between align-items-start mb-2 px-3 pt-3">
+                            <div class="fw-bold">Lluvia</div>
+                            <small class="text-muted">28/02</small>
+                        </div>
+                        <img src="https://cdn.pixabay.com/animation/2023/03/05/12/05/12-05-54-62_512.gif" alt="Ardilla"
+                            class="img-fluid img-fixed-height">
+                        <div class="TextoDeLaFoto foto-text justify-content-start align-items-start mt-3 px-3 pb-3">
+                            <div class="Likes">
+                                <b>85799999 Likes</b>
+                                <p>Me encanta la lluvia y el sofá :3</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="Fila row justify-content-center g-0">
+                <div class="Pantalla col-11 col-sm-9 col-md-6 col-lg-6 col-xl-6">
+                    <div class="Borde border rounded p-0 ">
+                        <div class="Titulo d-flex justify-content-between align-items-start mb-2 px-3 pt-3">
+                            <div class="fw-bold">Gatetes</div>
+                            <small class="text-muted">01/01</small>
+                        </div>
+                        <img src="https://cdn.pixabay.com/animation/2023/02/12/10/27/10-27-32-295_512.gif" alt="Gatetes"
+                            class="img-fluid img-fixed-height">
+                        <div class="TextoDeLaFoto foto-text justify-content-start align-items-start mt-3 px-3 pb-3">
+                            <div class="Likes">
+                                <b>0 Likes</b>
+                                <p> :"( </p> <!-- es una cara triste -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="Fila row justify-content-center g-0">
+                <div class="Pantalla col-11 col-sm-9 col-md-6 col-lg-6 col-xl-6">
+                    <div class="Borde border rounded p-0 ">
+                        <div class="Titulo d-flex justify-content-between align-items-start mb-2 px-3 pt-3">
+                            <div class="fw-bold">Pajarito</div>
+                            <small class="text-muted">28/12</small>
+                        </div>
+                        <img src="https://cdn.pixabay.com/photo/2025/05/25/12/44/bird-9621424_1280.jpg" alt="pajarito"
+                            class="img-fluid img-fixed-height">
+                        <div class="TextoDeLaFoto foto-text justify-content-start align-items-start mt-3 px-3 pb-3">
+                            <div class="Likes">
+                                <b>123123 Likes</b>
+                                <p>Un pajarito muy bonito</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="Fila row justify-content-center g-0">
+                <div class="Pantalla col-11 col-sm-9 col-md-6 col-lg-6 col-xl-6">
+                    <div class="Borde border rounded p-0 ">
+                        <div class="Titulo d-flex justify-content-between align-items-start mb-2 px-3 pt-3">
+                            <div class="fw-bold">Moza hermoza 2</div>
+                            <small class="text-muted">28/02</small>
+                        </div>
+                        <img src="https://cdn.pixabay.com/photo/2025/04/28/19/59/female-model-9565629_1280.jpg"
+                            alt="moza2" class="img-fluid img-fixed-height">
+                        <div class="TextoDeLaFoto foto-text justify-content-start align-items-start mt-3 px-3 pb-3">
+                            <div class="Likes">
+                                <b>65656565888 Likes</b>
+                                <p>Y a quién no...</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal" id="menuCrearPost" tabindex="-1">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Create a new post</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                        </button>
+                    </div>
+                    <div class="modal-body"> <!-- Modal modificado a partir de la pagina, recortado  -->
+                        <div class="mb-3">
+                            <label for="exampleFormControlTextarea1" class="form-label">Caption:</label>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="2"
+                                placeholder="Add the text here"></textarea>
+                            <!-- Modal modificado a partir de la pagina, se ha agregado placeholder para que saliera texto en gris borrable-->
+                        </div>
+                        <div class="camara d-flex gap-2">
+                            <button type="button" class="btn btn-light">
+                                <i class="fa-solid fa-camera"></i>
+                            </button>
+                            <button type="button" class="btn btn-light">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </button>
+                            <p></p>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-success">Publish</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
+            crossorigin="anonymous"></script>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+/* Posicionamiento del logo insta  */
+.Instagramlogo {
+  font-weight: bold;
+  font-size: 1rem;
+  display: flex;
+  align-items:center;
+}
+/* Modal tuerca */
+.tuerca {
+  outline: none;
+  text-decoration: none;
+}
+.tuerca:focus {
+  outline: none;
+}
+
+/* Para que no salga la linea de los Nav */
+.nav-tabs {
+  border-bottom: none !important;
+  margin-bottom: 1rem;
+}
+/* imagenes en la primera galeria */
+.img-fixed-height {
+  height: 250px;
+  object-fit: cover;
+  width: 100%;
+}
+
+/* Imagenes en la segunda galeria */
+#profile-tab-pane .img-fixed-height {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#profile-tab-pane .row {
+    margin-bottom: 15px;
+}
